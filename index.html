@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybernovate - Desarrollo Web & Soluciones Digitales</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================================================
+       HEADER / BARRAN DE NAVEGACIÓN
+       ========================================================= -->
+    <header>
+
+        <!-- MENÚ IZQUIERDO -->
+        <nav class="nav-left">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+            </ul>
+        </nav>
+
+
+        <!-- LOGO CENTRADO -->
+        <div class="logo-container">
+            <a href="#inicio">
+                <img src="img/logo-new.png" alt="Cybernovate Logo" class="logo-img">
+            </a>
+        </div>
+
+
+        <!-- MENÚ DERECHO -->
+        <nav class="nav-right">
+            <ul>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li>
+                    <button class="btn-contact" onclick="openContactModal()">
+                        Contáctenos
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- =========================================================
+       HERO SLIDER CON VIDEO DE BACKGROUND
+       ========================================================= -->
+    <section class="hero" id="inicio">
+        <!-- Video de fondo (Reemplazar la URL por tu archivo de video .mp4) -->
+        <video class="video-bg" autoplay loop muted playsinline>
+            <source src="video/slider.mp4">
+        </video>
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <h1 class="title-3d">Desarrollo Web de Alto Impacto</h1>
+            <p class="subtitle-3d">Creamos sitios web modernos, menús digitales HTML, sistemas administrativos y hosting
+                gratuito en GitHub Pages.</p>
+            <div class="hero-buttons">
+                <button class="btn-main btn-primary" onclick="openContactModal()">Solicitar Cotización</button>
+                <button class="btn-main btn-secondary" onclick="openDemoModal()">Ver Demos en GitHub</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+       SECCIÓN NOSOTROS
+       ========================================================= -->
+    <section class="section" id="nosotros">
+        <h2 class="section-title">¿Por qué elegir Cybernovate?</h2>
+        <p class="section-subtitle">Acompañamos a tu negocio en Trujillo y todo el Perú en su transformación digital.
+        </p>
+
+        <div class="about-container">
+            <div class="about-card">
+                <i class="fa-solid fa-rocket"></i>
+                <h3>Alojamiento Gratis</h3>
+                <p>Aprovechamos la infraestructura de **GitHub Pages** para alojar tus Landing Pages y cartas digitales
+                    sin pagos de hosting mensual.</p>
+            </div>
+            <div class="about-card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Código a la Medida</h3>
+                <p>Desarrollamos páginas rápidas, seguras y adaptadas a cualquier dispositivo usando estándares modernos
+                    de HTML, CSS y JavaScript.</p>
+            </div>
+            <div class="about-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Sistemas Administrativos</h3>
+                <p>Creación de paneles administrativos para gestionar la información de tu empresa, productos, menús y
+                    clientes de manera intuitiva.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+       SECCIÓN SERVICIOS
+       ========================================================= -->
+    <section class="section services" id="servicios">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <p class="section-subtitle">Soluciones digitales listas para impulsar tus ventas</p>
+
+        <div class="services-grid">
+            <!-- Servicio 1 -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-qrcode"></i></div>
+                <h3>Cartas & Menús Digitales (HTML)</h3>
+                <p>Ideal para restaurantes y cafeterías. Menús interactivos accesibles vía Código QR, rápidos y sin
+                    necesidad de descargar PDF.</p>
+                <span class="tag-free">Incluye QR + GitHub Hosting</span>
+            </div>
+
+            <!-- Servicio 2 -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <h3>Diseño & Landing Pages</h3>
+                <p>Páginas de aterrizaje enfocadas en conversión. Perfectas para promocionar productos, servicios o
+                    marcas personales.</p>
+                <span class="tag-free">Opción Hosting Gratis</span>
+            </div>
+
+            <!-- Servicio 3 -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+                <h3>Webs Administrativas</h3>
+                <p>Desarrollo de plataformas administrativas a medida con bases de datos, paneles de control y métricas
+                    para tu negocio.</p>
+            </div>
+
+            <!-- Servicio 4 -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+                <h3>Integración de Dominio</h3>
+                <p>Si ya cuentas con tu propio dominio `.com` o `.pe`, configuramos e integramos tu web para que
+                    funcione con tu marca oficial.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+       SECCIÓN PORTAFOLIO / PROYECTOS
+       ========================================================= -->
+    <section class="section" id="portafolio">
+        <h2 class="section-title">Trabajos Realizados</h2>
+        <p class="section-subtitle">Explora algunos proyectos desplegados en GitHub Pages</p>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img"><i class="fa-solid fa-utensils"></i></div>
+                <div class="project-body">
+                    <h3>Menú Digital Interactivo</h3>
+                    <p>Carta gastronómica HTML optimizada para Smartphones con acceso QR instantáneo.</p>
+                    <button class="btn-main btn-primary" style="width:100%; padding: 10px;"
+                        onclick="window.open('https://github.com', '_blank')">Ver Demo en Vivo</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img"><i class="fa-solid fa-briefcase"></i></div>
+                <div class="project-body">
+                    <h3>Landing Page Corporativa</h3>
+                    <p>Diseño corporativo en GitHub Pages para servicios profesionales con botón directo a WhatsApp.</p>
+                    <button class="btn-main btn-primary" style="width:100%; padding: 10px;"
+                        onclick="window.open('https://github.com', '_blank')">Ver Demo en Vivo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+       MODAL DE CONTACTO (ENVIAR A WHATSAPP 980176426)
+       ========================================================= -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-box">
+            <button class="close-btn" onclick="closeContactModal()">&times;</button>
+            <h2>¡Hablemos de tu proyecto!</h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">Completa el formulario y te responderemos de
+                inmediato vía WhatsApp.</p>
+
+            <form id="whatsappForm" onsubmit="sendWhatsApp(event)">
+                <div class="form-group">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Servicio requerido</label>
+                    <select id="service" required>
+                        <option value="Menú Digital HTML / Carta QR">Carta o Menú Digital HTML (QR)</option>
+                        <option value="Landing Page / Diseño Web">Landing Page / Diseño Web</option>
+                        <option value="Página Web Administrativa">Web Administrativa a Medida</option>
+                        <option value="Integración de Dominio / GitHub Pages">Configuración de Dominio / GitHub Pages
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Detalles del proyecto</label>
+                    <textarea id="details" rows="4" placeholder="Describe brevemente qué necesitas para tu web..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> Enviar Mensaje
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- =========================================================
+       MODAL DE DEMOS DE GITHUB
+       ========================================================= -->
+    <div class="modal-overlay" id="demoModal">
+        <div class="modal-box">
+            <button class="close-btn" onclick="closeDemoModal()">&times;</button>
+            <h2>Demos & Trabajos en GitHub</h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">Haz clic en cualquiera de los enlaces para ver
+                proyectos funcionales:</p>
+
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <a href="https://github.com" target="_blank" class="btn-main btn-secondary"
+                    style="color: var(--primary-dark); text-align: center;">
+                    <i class="fa-brands fa-github"></i> Ver Repositorio en GitHub #1 (Menú QR)
+                </a>
+                <a href="https://github.com" target="_blank" class="btn-main btn-secondary"
+                    style="color: var(--primary-dark); text-align: center;">
+                    <i class="fa-brands fa-github"></i> Ver Repositorio en GitHub #2 (Landing Page)
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 CYBERNOVATE. Todos los derechos reservados. | Trujillo, Perú</p>
+    </footer>
+
+    <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+    <script>
+        // Control de Modal Contacto
+        function openContactModal() {
+            document.getElementById('contactModal').classList.add('active');
+        }
+        function closeContactModal() {
+            document.getElementById('contactModal').classList.remove('active');
+        }
+
+        // Control de Modal Demos
+
+
+        // Envío de Formulario directamente a WhatsApp (980176426)
+        function sendWhatsApp(event) {
+            event.preventDefault();
+
+            const phone = "51980176426";
+            const name = document.getElementById('name').value;
+            const service = document.getElementById('service').value;
+            const details = document.getElementById('details').value;
+
+            const message = `*NUEVA CONSULTA - CYBERNOVATE*%0A%0A` +
+                `*Nombre:* ${encodeURIComponent(name)}%0A` +
+                `*Servicio Requerido:* ${encodeURIComponent(service)}%0A` +
+                `*Detalles:* ${encodeURIComponent(details)}`;
+
+            const whatsappURL = `https://wa.me/${phone}?text=${message}`;
+
+            window.open(whatsappURL, '_blank');
+            closeContactModal();
+        }
+    </script>
+    <script>
+        const header = document.querySelector('header');
+
+        function actualizarHeader() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
+
+        window.addEventListener('scroll', actualizarHeader);
+
+        // Ejecutar también al cargar la página
+        actualizarHeader();
+    </script>
+    <script>
+        // 1. Bloquear clic derecho (Menú contextual)
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        // 2. Bloquear atajos de teclado comunes para DevTools y ver código fuente
+        document.addEventListener('keydown', function (e) {
+            // Tecla F12
+            if (e.key === 'F12') {
+                e.preventDefault();
+            }
+
+            // Ctrl+Shift+I / Cmd+Option+I (DevTools)
+            // Ctrl+Shift+J / Cmd+Option+J (Consola)
+            // Ctrl+Shift+C / Cmd+Option+C (Inspeccionar elemento)
+            // Ctrl+U / Cmd+U (Ver código fuente)
+            // Ctrl+S / Cmd+S (Guardar página)
+            if (
+                (e.ctrlKey || e.metaKey) &&
+                (e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c') ||
+                    e.key === 'U' || e.key === 'u' || e.key === 'S' || e.key === 's')
+            ) {
+                e.preventDefault();
+            }
+        });
+
+        // 3. Detectar si DevTools está abierto mediante un bucle de debugger
+        setInterval(function () {
+            const startTime = performance.now();
+            debugger; // Si la consola está abierta, el código se pausará aquí
+            const endTime = performance.now();
+
+            // Si la pausa duró más de 100ms, significa que DevTools está activo
+            if (endTime - startTime > 100) {
+                document.body.innerHTML = '<h1>Acceso no permitido</h1>';
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
